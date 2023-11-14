@@ -26,7 +26,7 @@ export const App = () => {
         break;
 
       default:
-        alert('Please reload this page');
+        return;
     }
   };
 
