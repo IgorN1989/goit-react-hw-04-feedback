@@ -32,7 +32,7 @@ export const App = () => {
 
   const totalFeedback = good + neutral + bad;
 
-  const positiveFeedback = Math.round((good / totalFeedback) * 100) || 0;
+  const positiveFeedback = Math.round((good / totalFeedback) * 100) ?? 0;
 
   const options = ['good', 'neutral', 'bad'];
 
@@ -43,7 +43,7 @@ export const App = () => {
       </Section>
 
       <Section title="Statistics">
-        {totalFeedback ? (
+        {totalFeedback > 0 ? (
           <Statistics
             stats={{ good, neutral, bad }}
             total={totalFeedback}
