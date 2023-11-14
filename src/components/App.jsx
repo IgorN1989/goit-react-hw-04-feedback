@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 
 import { Container } from './Container/Container.styled';
 import { Section } from './Section/Section';
