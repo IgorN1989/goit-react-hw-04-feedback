@@ -1,14 +1,13 @@
 import { StatisticsContainer, StatisticsValue } from './Statistics.styled';
 
-export const Statistics = ({
-  stats: { good, neutral, bad },
-  total,
-  positivePercentage,
-}) => (
+export const Statistics = ({ stats, total, positivePercentage }) => (
   <StatisticsContainer>
-    <StatisticsValue>Good: {good}</StatisticsValue>
-    <StatisticsValue>Neutral: {neutral}</StatisticsValue>
-    <StatisticsValue>Bad: {bad}</StatisticsValue>
+    {Object.keys(stats).map(option => (
+      <StatisticsValue key={option}>
+        {option}: {stats[option]}
+      </StatisticsValue>
+    ))}
+
     <StatisticsValue>Total: {total}</StatisticsValue>
     <StatisticsValue>Positive feedback: {positivePercentage}%</StatisticsValue>
   </StatisticsContainer>

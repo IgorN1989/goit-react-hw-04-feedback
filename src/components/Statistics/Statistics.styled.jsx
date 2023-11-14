@@ -4,6 +4,7 @@ export const StatisticsContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: ${p => p.theme.spacing(4)};
+  text-transform: capitalize;
 `;
 
 export const StatisticsValue = styled.p`
