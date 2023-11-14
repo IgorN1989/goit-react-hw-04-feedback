@@ -15,7 +15,7 @@ const getBgColor = ({ $value, theme }) => {
 
 export const FeedbackOptionsContainer = styled.div`
   display: flex;
-  gap: ${p => p.theme.spacing(4)};
+  gap: ${p => p.theme.spacing(8)};
 `;
 
 export const FeedbackBtn = styled.button`
@@ -29,11 +29,11 @@ export const FeedbackBtn = styled.button`
   text-transform: capitalize;
   color: rgb(0, 0, 0, 0.7);
   background-color: rgb(187, 187, 187, 0.7);
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color ${p => p.theme.transition},
+    box-shadow ${p => p.theme.transition};
 
   &:hover {
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    box-shadow: ${p => p.theme.shadow};
     background-color: ${getBgColor};
   }
 `;

@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const SectionContainer = styled.section`
-  padding: ${p => p.theme.spacing(4)};
+  padding: ${p => p.theme.spacing(8)};
 `;
 
 export const SectionTitle = styled.h2`
