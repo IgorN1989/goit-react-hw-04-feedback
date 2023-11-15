@@ -11,6 +11,10 @@ export const App = () => {
   const [neutral, setNeutral] = useState(0);
   const [bad, setBad] = useState(0);
 
+  const totalFeedback = good + neutral + bad;
+  const positiveFeedback = Math.round((good / totalFeedback) * 100) ?? 0;
+  const options = ['good', 'neutral', 'bad'];
+
   const addFeedback = option => {
     switch (option) {
       case 'good':
@@ -29,12 +33,6 @@ export const App = () => {
         return;
     }
   };
-
-  const totalFeedback = good + neutral + bad;
-
-  const positiveFeedback = Math.round((good / totalFeedback) * 100) ?? 0;
-
-  const options = ['good', 'neutral', 'bad'];
 
   return (
     <Container>
